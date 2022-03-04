@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Projects({showModal}){
+export default function Projects({showModal, id}){
   const repositorios = {
     projetoAlura: "../images/projeto1.png", 
     projetoToDoList: "../images/projeto2.png", 
@@ -9,7 +9,7 @@ export default function Projects({showModal}){
   }
 
   return(
-    <div>
+    <div id={id}>
       <ProjectStyle>
         <h2>Projetos</h2>
         <ul>
