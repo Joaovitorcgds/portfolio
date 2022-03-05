@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Skills(){
+export default function Skills({id}){
   const habilidades = {
     HTML: "/images/html5.png",
     CSS: "/images/css3.png",
@@ -12,7 +12,7 @@ export default function Skills(){
   }
 
   return(
-    <div>
+    <div id={id}>
       <SkillsStyle>
         <h2>Skills</h2>
         <ul>

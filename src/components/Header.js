@@ -2,17 +2,42 @@ import React from "react"
 import styled from "styled-components"
 
 
-export default function Header(){
+export default function Header({onScrollToAnimation}){
+  function scrollToAnimation(e){
+    e.preventDefault()
+    const element = e.target
+    const id = element.getAttribute("href")
+    const to = document.querySelector(id).offsetTop
+    window.scroll({
+      top: to - 20,
+      behavior: "smooth"})
+    }
   return (
     <div>
       <HeaderStyle>
         <span>João Vitor Costa</span>
         <nav>
           <ul>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li>
+              <a href="#about" onClick={scrollToAnimation}>
+                Sobre
+              </a>
+            </li>
+            <li>
+              <a href="#projects" onClick={scrollToAnimation}>
+                Projetos
+              </a>
+            </li>
+            <li>
+              <a href="#skills" onClick={scrollToAnimation}>
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#contact" onClick={scrollToAnimation}>
+                Contato
+              </a>
+            </li>
           </ul>
         </nav>
       </HeaderStyle>

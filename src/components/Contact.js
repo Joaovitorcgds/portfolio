@@ -1,16 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Contact(){
+export default function Contact({id}){
   const midia = {
-    instagram: ["../icons/instagram.png", "https://www.instagram.com/joaovitorcgds/"],
-    github: ["../icons/github.png", "https://github.com/Joaovitorcgds"],
-    linkedin: ["../icons/linkedin.png", "https://www.linkedin.com/in/joaovitorcgds/"],
-    whatsapp: ["../icons/whatsapp.png", "https://wa.me/55021975875130"]
+    instagram: [
+      "../icons/instagram.png", 
+      "https://www.instagram.com/joaovitorcgds/"
+    ],
+    github: [
+      "../icons/github.png", 
+      "https://github.com/Joaovitorcgds"
+    ],
+    linkedin: [
+      "../icons/linkedin.png", 
+      "https://www.linkedin.com/in/joaovitorcgds/"
+    ],
+    whatsapp: [
+      "../icons/whatsapp.png", 
+      "https://wa.me/55021975875130"
+    ]
   }
 
   return(
-    <div >
+    <div id={id}>
       <ContatoStyle>
         <h1>Contato</h1>
         <p>Se curtiu meus projetos, me mande uma mensagem em uma dessas redes sociais e responderei assim que possível.</p>

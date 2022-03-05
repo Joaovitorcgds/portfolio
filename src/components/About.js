@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function About(){
+export default function About({id}){
   const Passatempo = {
     Jogos: "/icons/_videogame.png",
     Música: "/icons/_headphones.png",
@@ -10,7 +10,7 @@ export default function About(){
   }
 
   return(
-    <div>
+    <div id={id}>
       <AboutStyle>
       <h2>Sobre mim</h2>
         <p>Estudo desenvolvimento web já faz quase 2 anos, minha curiosidade e vontade de aprender só tem crescido desde então. Procuro sempre estar bem informado sobre as mudanças que acontecem no mundo da tecnologia e um dia espero ajudar alguém com os códigos que eu escrevo.</p>
